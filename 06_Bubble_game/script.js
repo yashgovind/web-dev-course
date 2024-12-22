@@ -8,7 +8,7 @@ let score = 0;
 let currentHit = 0;
 
 function makeBubbles() {
-  for (let i = 0; i < 180; i++) {
+  for (let i = 0; i <102; i++) {
     //generate a random number between 1 and 20 and make bubbles../
     let randomNum = Math.floor(Math.random() * 20);
     bubbles += `<div class = "bubble">${randomNum}</div>`;
@@ -43,8 +43,8 @@ panelBottom.addEventListener("click", (e) => {
     let clikedBubble = (parseInt((e.target.textContent)));
     if (clikedBubble === currentHit) {
         IncreaseScore();
-        getNewHit();
         makeBubbles();
+        getNewHit();
     }
 
 })
